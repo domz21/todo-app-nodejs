@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Node JS Todo App</title>
+    <link rel = "stylesheet" href = "/styles.css" type = "text/css">
+  </head>
+  <body>
+    <div id = "todo-container">
+      <h2>To-Do List</h2>
+      <ul>
+        <% for(var i=0; i < todos.length; i++){ %>
+          <li><%= todos[i].item %></li>
+        <% } %>
+      </ul>
+      <form action = "/todo" method = "POST">
+        <input type = "text" name = "item" placeholder="Add New To-do" required />
+        <button type = "submit">Add</button>
+      </form>
+    </div>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src = "/todo-list.js"></script>
+  </body>
+</html>
